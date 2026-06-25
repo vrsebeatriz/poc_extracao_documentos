@@ -1,0 +1,272 @@
+{
+  "modelo": "gemini-2.5-flash",
+  "caso_1_cnh": {
+    "resultado": {
+      "nome": "LINCE DA SILVA",
+      "cpf": "891.340.611-75",
+      "data_nascimento": "02/05/2017",
+      "data_emissao": "22/10/2013",
+      "filiacao_pai": "Pai José da Silva",
+      "filiacao_mae": "Mãe Maria da Silva",
+      "numero_registro": "00123456789",
+      "categoria": "B",
+      "validade": "02/05/2018",
+      "local_emissao": "BRASÍLIA - DISTRITO FEDERAL, DF"
+    },
+    "metricas": {
+      "latencia_s": 2.87,
+      "tokens_input": 284,
+      "tokens_output": 136,
+      "custo_usd": 0.000124,
+      "inferencias": 1,
+      "thinking_budget": 0
+    }
+  },
+  "caso_2_paper": {
+    "resultado": {
+      "titulo": "The Claude 3 Model Family: Opus, Sonnet, Haiku",
+      "abstract": "We introduce Claude 3, a new family of large multimodal models – Claude 3 Opus, our most capable offering, Claude 3 Sonnet, which provides a combination of skills and speed, and Claude 3 Haiku, our fastest and least expensive model. All new models have vision capabilities that enable them to process and analyze image data. The Claude 3 family demonstrates strong performance across benchmark evaluations and sets a new standard on measures of reasoning, math, and coding. Claude 3 Opus achieves state-of-the-art results on evaluations like GPQA [1], MMLU [2], MMMU [3] and many more. Claude 3 Haiku performs as well or better than Claude 2 [4] on most pure-text tasks, while Sonnet and Opus significantly outperform it. Additionally, these models exhibit improved fluency in non-English languages, making them more versatile for a global audience. In this report, we provide an in-depth analysis of our evaluations, focusing on core capabilities, safety, societal impacts, and the catastrophic risk assessments we committed to in our Responsible Scaling Policy [5].",
+      "modelos": [
+        {
+          "nome": "Claude 3 Opus",
+          "descricao": "O modelo mais capaz e inteligente da família Claude 3. Demonstra resultados de ponta em raciocínio, matemática e codificação, superando outros modelos em avaliações como GPQA, MMLU e MMMU."
+        },
+        {
+          "nome": "Claude 3 Sonnet",
+          "descricao": "Oferece uma combinação de habilidades e velocidade. Apresenta proficiência aumentada na criação de conteúdo matizado, análise, previsão, sumarização precisa e tratamento de consultas científicas."
+        },
+        {
+          "nome": "Claude 3 Haiku",
+          "descricao": "O modelo mais rápido e menos dispendioso da família Claude 3. Desempenha-se tão bem ou melhor que o Claude 2 na maioria das tarefas de texto puro e inclui capacidades de visão."
+        }
+      ],
+      "principais_benchmarks": [
+        {
+          "nome": "MMLU (5-shot CoT)",
+          "resumo": "Claude 3 Opus: 88.2%, Claude 3 Sonnet: 81.5%, Claude 3 Haiku: 76.7%. Opus e Sonnet superam significativamente o Claude 2."
+        },
+        {
+          "nome": "MATH (Maj@32 4-shot)",
+          "resumo": "Claude 3 Opus: 73.7%, Claude 3 Sonnet: 55.1%, Claude 3 Haiku: 50.3%. Opus demonstra forte melhoria."
+        },
+        {
+          "nome": "HumanEval (0-shot)",
+          "resumo": "Claude 3 Opus: 84.9%, Claude 3 Sonnet: 73.0%, Claude 3 Haiku: 75.9%. A família Claude 3 melhora significativamente em tarefas de codificação."
+        },
+        {
+          "nome": "GPQA (Diamond, Maj@32 5-shot CoT)",
+          "resumo": "Claude 3 Opus: 59.5%, Claude 3 Sonnet: 46.3%, Claude 3 Haiku: 40.1%. Opus alcança resultados de ponta, melhorando consideravelmente em relação a modelos anteriores."
+        },
+        {
+          "nome": "MMMU (Overall)",
+          "resumo": "Claude 3 Opus: 59.4%, Claude 3 Sonnet: 53.1%, Claude 3 Haiku: 50.2%. Opus demonstra desempenho superior em entendimento multimodal."
+        }
+      ],
+      "graficos": [
+        {
+          "figura": "Figure 1",
+          "conclusao": "A Figura 1 ilustra a capacidade do Claude 3 Opus de compreender gráficos e realizar raciocínio em várias etapas. O modelo usou seu conhecimento do G7, identificou os países do G7, recuperou dados de um gráfico e realizou cálculos com esses valores para responder a uma pergunta sobre a diferença percentual média no uso da internet entre jovens adultos e idosos em nações do G7, resultando em 10%."
+        }
+      ],
+      "secoes": [
+        {
+          "titulo": "1 Introduction",
+          "resumo": "Apresenta a família de modelos Claude 3 (Opus, Sonnet, Haiku) como novos benchmarks na indústria para raciocínio, matemática, codificação, compreensão multilíngue e qualidade de visão. Detalha que os modelos são multimodais, foram treinados com hardware da AWS e GCP usando PyTorch, JAX e Triton, e se destacam na entrada multimodal e uso de ferramentas. Menciona que a família Claude 3 estará disponível em ofertas de consumo e soluções empresariais a partir de março de 2024, com corte de conhecimento em agosto de 2023."
+        },
+        {
+          "titulo": "2 Model Details",
+          "resumo": "Discute os usos pretendidos dos modelos Claude como assistentes úteis, honestos e inofensivos, excelentes em conversação, colaboração de ideias, codificação e tarefas baseadas em texto, com recursos multimodais e capacidade de \"personalidade\". Aborda os usos não pretendidos, como em situações de alto risco ou como substitutos de profissionais humanos, e as capacidades e limitações atuais (não busca na web, dados até meados de 2023, desempenho mais fraco em idiomas de poucos recursos). Lista os usos proibidos conforme a Política de Uso Aceitável (AUP), incluindo campanhas políticas, vigilância e decisões de justiça criminal. Descreve as medidas de segurança contra uso indevido, incluindo sistemas automatizados e instruções para o modelo responder com cautela."
+        },
+        {
+          "titulo": "2.5 Training Data",
+          "resumo": "Os modelos Claude 3 são treinados em uma combinação proprietária de informações publicamente disponíveis na internet (até agosto de 2023), dados não públicos de terceiros, dados de serviços de rotulagem e dados gerados internamente. Os dados passam por métodos de limpeza e filtragem, incluindo deduplicação e classificação. Os modelos não foram treinados em dados de prompt/output de usuários e clientes. A Anthropic segue as práticas da indústria para rastreamento de páginas da web públicas, respeitando arquivos robots.txt e não acessando páginas protegidas por senha."
+        },
+        {
+          "titulo": "2.6 Training Process",
+          "resumo": "Claude foi treinado com foco em ser útil, inofensivo e honesto. As técnicas incluem pré-treinamento em grandes dados diversos e feedback humano. A Anthropic utilizou a IA Constitucional para alinhar Claude com valores humanos, baseando-se em princípios como a Declaração Universal dos Direitos Humanos e, para Claude 3, um princípio adicional para respeitar os direitos das pessoas com deficiência. Alguns dados de feedback humano foram tornados públicos. Após o treinamento, os modelos são submetidos a avaliações de segurança e monitoramento contínuo por meio de classificadores da equipe de Confiança e Segurança."
+        },
+        {
+          "titulo": "2.7 Release Decisions and Maintenance",
+          "resumo": "A Anthropic adota uma abordagem responsável no desenvolvimento e implantação de sistemas de IA, seguindo a estrutura de Gerenciamento de Riscos de IA do NIST. Isso inclui documentação clara de uso/limitações, red teaming interativo, avaliações contínuas, rollout incremental, monitoramento automatizado e revisão humana, além de atualizações regulares do modelo. A empresa também prioriza a proteção de dados sensíveis e informações pessoais, e segue sua Política de Escalonamento Responsável como uma Corporação de Benefício Público focada no desenvolvimento seguro de sistemas de IA."
+        },
+        {
+          "titulo": "3 Security",
+          "resumo": "A segurança do ambiente dos modelos é protegida por autenticação multifator, controles de duas partes para modelos avançados e níveis mínimos de privilégio. Camadas adicionais de defesa incluem monitoramento 24/7, endurecimento de endpoints, controle de armazenamento e compartilhamento de dados, verificação de pessoal e segurança física. Todas as alterações de código são testadas rigorosamente antes da implantação, e são realizados testes de penetração para melhorar a postura de defesa."
+        },
+        {
+          "titulo": "4 Social Responsibility",
+          "resumo": "Como uma Corporação de Benefício Público (PBC), a Anthropic está comprometida em desenvolver sistemas de IA seguros e responsáveis. Os modelos Claude 3 demonstram uma compreensão mais matizada das solicitações, reconhecendo danos reais e recusando prompts inofensivos com menos frequência. A AUP e os processos de Confiança e Segurança são moldados por considerações éticas para garantir que o Claude seja útil, inofensivo e honesto, embora reconheçam que os modelos ainda podem cometer erros."
+        },
+        {
+          "titulo": "4.1 Constitutional AI",
+          "resumo": "O foco principal da pesquisa é treinar modelos Claude para serem úteis, honestos e inofensivos, utilizando uma Constituição de princípios éticos e comportamentais. A maioria dos princípios são os mesmos publicados em maio de 2023, visando evitar saídas sexistas, racistas, tóxicas, ilegais ou antiéticas. Um princípio adicional foi adicionado para tornar Claude compreensivo e acessível a indivíduos com deficiência, resultando em menor viés de estereótipo."
+        },
+        {
+          "titulo": "4.2 Labor",
+          "resumo": "A Anthropic colabora com várias plataformas de trabalho de dados que gerenciam trabalhadores envolvidos em projetos da Anthropic. As tarefas incluem selecionar saídas de modelo preferidas para alinhamento, avaliar saídas de modelo em termos de precisão, utilidade, inofensividade e testes adversários (red teaming) para identificar vulnerabilidades de segurança. Este trabalho de dados é usado principalmente em pesquisa de segurança técnica e, em parte, no treinamento de modelos."
+        },
+        {
+          "titulo": "4.3 Sustainability",
+          "resumo": "A Anthropic compensa suas emissões de carbono (incluindo o uso de computação em nuvem) e colabora com provedores de nuvem que priorizam energia renovável e neutralidade de carbono. A empresa se esforça para compensar totalmente suas emissões operacionais de carbono a cada ano, investindo em créditos de carbono verificados que financiam projetos de redução de emissões. O objetivo é manter um impacto climático líquido zero anualmente."
+        },
+        {
+          "titulo": "5 Core Capabilities Evaluations",
+          "resumo": "Avaliamos a família Claude 3 de forma abrangente em várias categorias: Raciocínio (matemática, científica, senso comum), Multilíngue (tradução, sumarização, raciocínio em múltiplas línguas), Contexto Longo (resposta a perguntas e recuperação de informações em textos extensos), Honestidade/Factualidade (precisão e confiabilidade das respostas, reconhecimento de limitações) e Multimodal (diagramas científicos, VQA, raciocínio quantitativo com imagens). Essas avaliações mediram habilidades, forças e fraquezas dos modelos, incluindo benchmarks padrão da indústria e avaliações internas para lidar com recusas inofensivas."
+        },
+        {
+          "titulo": "5.1 Reasoning, Coding, and Question Answering",
+          "resumo": "A família Claude 3 foi avaliada em benchmarks padrão da indústria para raciocínio, leitura, matemática, ciência e codificação, demonstrando capacidades superiores e, em muitos casos, resultados de ponta. Os modelos foram testados em GPQA, MMLU, ARC-Challenge, PubMedQA, GSM8K, MATH, MGSM, HellaSwag, WinoGrande, DROP, RACE-H, QuALITY, HumanEval, APPS, MBPP e BIG-Bench-Hard. GPQA, um benchmark de Q&A em nível de pós-graduação, é destacado, onde Claude 3 Opus atinge aproximadamente 50% de precisão (0-shot CoT) e 59.5% com Maj@32 5-shot CoT, superando significativamente modelos anteriores, mas ainda abaixo do desempenho de especialistas humanos."
+        },
+        {
+          "titulo": "5.2 Standardized Tests",
+          "resumo": "A família Claude 3 foi avaliada em testes padronizados como LSAT, MBE, American Mathematics Competition (AMC) e GRE General Test. Claude 3 Opus obteve 161 no LSAT, 85% no MBE, 63/150 no AMC 12, 72/150 no AMC 10, 84/150 no AMC 8, 159 no GRE Quantitativo, 166 no GRE Verbal e 5.0 (2-shot) no GRE Escrita. Esses resultados mostram o desempenho competitivo dos modelos em exames acadêmicos e profissionais, com Opus superando os outros modelos Claude 3 na maioria das métricas."
+        },
+        {
+          "titulo": "5.3 Vision Capabilities",
+          "resumo": "A família Claude 3 de modelos demonstra progresso significativo em desafios de raciocínio multimodal complexos, indo além da compreensão de texto simples. Um exemplo primordial é o desempenho no benchmark AI2D de diagramas científicos, onde Claude 3 Sonnet atinge o estado da arte com 89.2% em 0-shot, seguido por Claude 3 Opus (88.3%) e Claude 3 Haiku (80.6%). Os resultados na Tabela 3 foram obtidos com amostragem T=0, e a técnica de upsampling de imagens melhorou o desempenho em 3-4% no AI2D. O desempenho dos modelos Claude 3 por disciplina no MMMU também é relatado na Tabela 3."
+        }
+      ]
+    },
+    "metricas": {
+      "latencia_s": 21.61,
+      "tokens_input": 2651,
+      "tokens_output": 3146,
+      "custo_usd": 0.002285,
+      "inferencias": 1,
+      "thinking_budget": 1024
+    }
+  },
+  "caso_3_fatura": {
+    "resultado": {
+      "dados_cliente": {
+        "nome": "MARIA JOSÉ DA SILVA",
+        "cpf": "123.456.789-10",
+        "endereco": "RUA JOÃO FERNANDES VIEIRA 175 BOA VISTA",
+        "classificacao": "BI RESIDENCIAL RESIDENCIAL Monofásico"
+      },
+      "dados_fatura": {
+        "conta_contrato": "1234567890",
+        "mes_ano": "06/2014",
+        "data_vencimento": "10/07/2014",
+        "total_a_pagar": 63.72
+      },
+      "consumo": {
+        "leitura_anterior": 24630.0,
+        "leitura_atual": 24790.0,
+        "consumo_kwh": 160.0,
+        "numero_dias": 31
+      },
+      "tributos": [
+        {
+          "tributo": "ICMS",
+          "aliquota_pct": 17.0,
+          "valor": 10.83
+        },
+        {
+          "tributo": "PIS",
+          "aliquota_pct": 0.89,
+          "valor": 0.83
+        },
+        {
+          "tributo": "COFINS",
+          "aliquota_pct": 4.54,
+          "valor": 2.89
+        }
+      ],
+      "composicao_valor": [
+        {
+          "item": "GERAÇÃO DE ENERGIA",
+          "valor_rs": 26.38,
+          "percentual": 41.4
+        },
+        {
+          "item": "TRANSMISSÃO",
+          "valor_rs": 1.72,
+          "percentual": 2.7
+        },
+        {
+          "item": "DISTRIBUIÇÃO (Celpe)",
+          "valor_rs": 19.07,
+          "percentual": 29.93
+        },
+        {
+          "item": "ENCARGOS SETORIAIS",
+          "valor_rs": 2.2,
+          "percentual": 3.45
+        },
+        {
+          "item": "TRIBUTOS",
+          "valor_rs": 14.35,
+          "percentual": 22.52
+        },
+        {
+          "item": "TOTAL",
+          "valor_rs": 63.72,
+          "percentual": 100
+        }
+      ],
+      "historico_consumo": [
+        {
+          "mes_ano": "JUL 14",
+          "consumo_kwh": 156
+        },
+        {
+          "mes_ano": "JUN 14",
+          "consumo_kwh": 160
+        },
+        {
+          "mes_ano": "MAI 14",
+          "consumo_kwh": 155
+        },
+        {
+          "mes_ano": "ABR 14",
+          "consumo_kwh": 109
+        },
+        {
+          "mes_ano": "MAR 14",
+          "consumo_kwh": 152
+        },
+        {
+          "mes_ano": "FEV 14",
+          "consumo_kwh": 157
+        },
+        {
+          "mes_ano": "JAN 14",
+          "consumo_kwh": 151
+        },
+        {
+          "mes_ano": "DEZ 13",
+          "consumo_kwh": 155
+        },
+        {
+          "mes_ano": "NOV 13",
+          "consumo_kwh": 165
+        },
+        {
+          "mes_ano": "OUT 13",
+          "consumo_kwh": 174
+        },
+        {
+          "mes_ano": "SET 13",
+          "consumo_kwh": 152
+        },
+        {
+          "mes_ano": "AGO 13",
+          "consumo_kwh": 165
+        },
+        {
+          "mes_ano": "JUL 13",
+          "consumo_kwh": 158
+        }
+      ]
+    },
+    "metricas": {
+      "latencia_s": 4.11,
+      "tokens_input": 357,
+      "tokens_output": 686,
+      "custo_usd": 0.000465,
+      "inferencias": 1,
+      "thinking_budget": 0
+    }
+  }
+}
