@@ -21,7 +21,6 @@ Esta abordagem visa resolver ou minimizar os problemas de latência e custo oper
 
 - `poc_extracao_documentos.ipynb`: Notebook com a implementação completa, contendo a lógica de chamadas da API, as funções auxiliares e a execução dos três cenários de teste propostos.
 - `resultados_poc.json`: Arquivo gerado pela execução da POC, contendo o output JSON extraído de cada um dos casos de uso.
-- *`Dossie_Pesquisa.pdf`*: O Relatório de Viabilidade e Integração principal do desafio deve ser incluído neste repositório.
 
 ## Casos de Uso Implementados
 
